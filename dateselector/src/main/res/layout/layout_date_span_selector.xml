@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:paddingTop="@dimen/dimension_10dp">
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <TextView
+        android:id="@+id/date_span_selected_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:drawableRight="@drawable/sharp_arrow_drop_down_black_24"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="Today" />
+
+    <RelativeLayout
+        android:id="@+id/date_span_option_holder_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date_span_selected_text"
+        android:animateLayoutChanges="true"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/center_vertical_period"
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/dimension_10dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/yesterday_period"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/dimension_10dp"
+            android:layout_toLeftOf="@id/center_vertical_period"
+            android:gravity="center"
+            android:text="Yesterday" />
+
+        <TextView
+            android:id="@+id/today_period"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/dimension_10dp"
+            android:layout_toRightOf="@id/center_vertical_period"
+            android:background="@color/redMedium"
+            android:gravity="center"
+            android:text="Today"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/previous_month_period"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/yesterday_period"
+            android:layout_margin="@dimen/dimension_10dp"
+            android:layout_toLeftOf="@id/center_vertical_period"
+            android:gravity="center"
+            android:text="Previous Month" />
+
+        <TextView
+            android:id="@+id/current_month_period"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/yesterday_period"
+            android:layout_margin="@dimen/dimension_10dp"
+            android:layout_toRightOf="@id/center_vertical_period"
+            android:gravity="center"
+            android:text="This Month" />
+
+        <TextView
+            android:id="@+id/this_week_period"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/current_month_period"
+            android:layout_margin="@dimen/dimension_10dp"
+            android:layout_toLeftOf="@id/center_vertical_period"
+            android:gravity="center"
+            android:text="This Week" />
+
+        <TextView
+            android:id="@+id/custom_period"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/current_month_period"
+            android:layout_margin="@dimen/dimension_10dp"
+            android:layout_toRightOf="@id/center_vertical_period"
+            android:gravity="center"
+            android:text="Custom" />
+
+
+    </RelativeLayout>
+</RelativeLayout>
